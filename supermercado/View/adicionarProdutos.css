@@ -1,0 +1,176 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2ffe6;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+form, .container {
+    background-color: #ffffff;
+    width: 700px;
+    padding: 70px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #006633;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #00994d;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: #006633;
+}
+
+input::placeholder,
+textarea::placeholder {
+    padding-left: 0px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+padding-left: 40px !important;}
+
+input[name="nomeProduto"],
+input[name="precoProduto"],
+input[name="qtdEstoque"],
+input[name="imagemProduto"],
+textarea[name="descrProduto"] {
+    padding: 12px 14px 12px 14px; 
+}
+
+input[name="nomeProduto"]
+{
+    width: 99%;
+    border: 1px solid #dfe6d8;
+    border-radius: 8px;
+    margin-top: 5px;
+    background-color: #f8fbf5;
+    font-size: 14px;
+    color: #2e3a24;
+}
+
+input[name="precoProduto"]
+{
+    width: 85%;
+    border: 1px solid #dfe6d8;
+    border-radius: 8px;
+    margin-top: 5px;
+    background-color: #f8fbf5;
+    font-size: 14px;
+    color: #2e3a24;
+}
+
+input[name="qtdEstoque"]
+{
+    width: 100%;
+    border: 1px solid #dfe6d8;
+    border-radius: 8px;
+    margin-top: 5px;
+    background-color: #f8fbf5;
+    font-size: 14px;
+    color: #2e3a24;
+}
+
+input[name="imagemProduto"]
+{
+    width: 100%;
+    border: 1px solid #dfe6d8;
+    border-radius: 8px;
+    margin-top: 5px;
+    background-color: #f8fbf5;
+    font-size: 14px;
+    color: #2e3a24;
+}
+
+textarea[name="descrProduto"] {
+    width: 103%;
+    height: 100px;   /* altura do campo */
+    border: 1px solid #dfe6d8;
+    border-radius: 8px;
+    margin-top: 5px;
+    background-color: #f8fbf5;
+    font-size: 14px;
+    color: #2e3a24;
+    resize: vertical; /* pode redimensionar só verticalmente */
+}
+
+textarea[name="descrProduto"]::placeholder {
+    padding-top: 0;
+}
+
+.linha {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap; /* permite quebra sem invadir */
+}
+
+.campo {
+    flex: 1;
+    min-width: 300px; /* impede um colar no outro */
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #7fc15a;
+    background-color: #ffffff;
+}
+
+#submit {
+    width: 107%;
+    margin-top: 25px;
+    background-image: linear-gradient( to right, rgb(0, 153, 0), rgb(0, 102, 0));
+    padding: 12px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[name="cancelar"] {
+    width: 107%;
+    margin-top: 10px;
+    background-color: #e3e6e1;
+    padding: 10px;
+    border: none;
+    color: #2e3a24;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+select[name="categoria"] {
+    width: 100%;
+    padding: 12px 14px;
+    height: 45px; 
+    border: 1px solid #dfe6d8;
+    border-radius: 8px;
+    margin-top: 5px;
+    background-color: #f8fbf5;
+    font-size: 14px;
+    color: #2e3a24;
+    appearance: none;   /* tira estilo padrão */
+}
+
+input[name="cancelar"]:hover {
+    background-color: #d3d7d0;
+}
+

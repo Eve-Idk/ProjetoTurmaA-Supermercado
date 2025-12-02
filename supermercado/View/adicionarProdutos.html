@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adicionarProdutos.css">
+    <title>Adicionar produtos</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Cadastrar Novo Produto</h1>
+    <p>Preencha as informações do produto para adicioná-lo ao catálogo</p>
+    
+    <label for="nomeProduto">Nome do Produto*</label>
+    <div class="campo-icone-nome">
+    <input type="text" name="nomeProduto" class="campo-icone-nome" placeholder="Digite o nome do produto" required>
+    </div>
+
+   <div class="linha">
+    <div class="campo">
+        <label><b>Preço (R$)*</b></label>
+        <input type="text" name="precoProduto" class="campo-icone-preco" placeholder="0,00">
+    </div>
+
+     <div class="campo">
+        <label><b>Quantidade em Estoque*</b></label>
+        <input type="number" name="qtdEstoque" class="campo-icone-estoque" placeholder="0">
+    </div>
+</div>
+
+    <div class="linha">
+    <div class="campo">
+        <label><b>Categoria*</b></label>
+        <select name="categoria" class="campo-icone-categoria">
+            <option selected disabled>Selecione uma categoria</option>
+            <option>Eletrônicos</option>
+            <option>Roupas</option>
+        </select>
+    </div>
+
+    <div class="campo">
+        <label><b>URL da Imagem*</b></label>
+        <input type="url" name="imagemProduto" class="campo-icone-imagem" placeholder="https://exemplo.com/imagem.jpg">
+    </div>
+</div>
+    <label for="descrProduto">Descrição*</label>
+    <textarea type="text" class="campo-icone-descricao" name="descrProduto" placeholder="Descreva o produto" required></textarea><br>
+
+    <input type="submit" name="adicionarProduto" id="submit" value="Adicionar Produto" required>
+    <input type="submit" name="cancelar" value="Cancelar"><br>
+    </div>
+</body>
+</html>
