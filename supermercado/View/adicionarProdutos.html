@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar produtos</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Cadastrar Novo Produto</h1>
+    <p>Preencha as informações do produto para adicioná-lo ao catálogo</p>
+    
+    <label for="nomeProduto">Nome do Produto*</label>
+    <input type="text" name="nomeProduto" placeholder="Digite o nome do produto">
+    </div>
+        <label><b>Preço (R$)*</b></label>
+        <input type="text" name="precoProduto" placeholder="0,00">
+    </div>
+        <label><b>Quantidade em Estoque*</b></label>
+        <input type="number" name="qtdEstoque" placeholder="0">
+    </div>
+</div>
+        <label><b>Categoria*</b></label>
+        <select name="categoria">
+            <option selected disabled>Selecione uma categoria</option>
+            <option>Massas</option>
+            <option>Adega</option>
+        </select>
+    </div>
+        <label><b>URL da Imagem*</b></label>
+        <input type="url" name="imagemProduto" placeholder="https://exemplo.com/imagem.jpg">
+    </div>
+</div>
+    <label for="descrProduto">Descrição*</label>
+    <textarea type="text" name="descrProduto" placeholder="Descreva o produto"></textarea><br>
+
+    <input type="submit" name="adicionarProduto" id="submit" value="Adicionar Produto" required>
+    <input type="submit" name="cancelar" value="Cancelar"><br>
+    </div>
+
+    <div class="dicas">
+        <b>Dicas para um bom cadastro</b>
+        <ul>
+            <li>Use nomes descritivos e claros</li>
+            <li>Adicione uma imagem de qualidade</li>
+            <li>Mantenha o estoque atualizado</li>
+            <li>Use imagens de boa qualidade (recomendado 400x400 px ou maior)</li>
+            <li>Verifique se o preço está correto antes de salvar</li>
+        </ul>
+    </div>
+</body>
+</html>
