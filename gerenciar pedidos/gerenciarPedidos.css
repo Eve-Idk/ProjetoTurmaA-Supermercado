@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TOPO */
+.topo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2px 15px;
+    background-image: linear-gradient(to right, rgb(0, 128, 0), rgb(253, 224, 71), rgb(255, 0, 0));
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo voltar */
+.logo img {
+    width: 40px;
+    cursor: pointer;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* TÍTULO */
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.12);
+}
+
+th {
+    background-color: #04AA6D;
+    color: white;
+    text-align: left;
+    padding: 14px 10px;
+    font-size: 15px;
+}
+
+td {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Alternância de linhas */
+tr:nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+tr:hover {
+    background-color: #e4f9e0;
+}
+
+/* BOTÕES */
+button {
+    padding: 5px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.visualizar {
+    background-color: #00c853;
+    color: white;
+}
+
+.visualizar:hover {
+    background-color: #009c3c;
+}
+
+.atualizar {
+    background-color: #ffb300;
+    color: #333;
+}
+
+.atualizar:hover {
+    background-color: #e39e00;
+}
