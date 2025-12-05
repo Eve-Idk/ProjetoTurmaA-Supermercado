@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="detalhesPedido.css">
+    <title>Detalhes do Pedido</title>
+</head>
+    <body>
+        <header class="topo">
+             <div class="logo">
+        <img src="../Imagens/Icones/painelAdm.png">
+    </div>
+     <h1>Detalhes do pedido</h1>
+</header>
+        <script>
+    const params = new URLSearchParams(window.location.search);
+    const idPedido = params.get("id");
+
+    console.log("Pedido selecionado:", idPedido);
+
+    const pedidos = {
+        1: {
+            Cliente: "João da Silva",
+            Email: "exemplo01@gmail.com",
+            Telefone:"(00)00000-0000",
+            produto: "Arroz Camil 1kg",
+            quantidade: 2,
+            preco: 8.99,
+            pagamento: "Pix",
+            endereco: "Rua das Flores, 123",
+            situacao: "Entregue",
+            data: "03/12/2025"
+        },
+        2: {
+            Cliente: "Maria de Jesus Moreira",
+            Email: "exemplo01@gmail.com",
+            Telefone:"(00)00000-0000",
+            produto: "Feijão Carioca 1kg",
+            quantidade: 1,
+            preco: 6.49,
+            pagamento: "Cartão de Crédito",
+            endereco: "Av. Brasil, 500",
+            situacao: "A caminho",
+            data: "04/12/2025"
+        },
+        3: {
+            Cliente: "Ana Clara Alves",
+            Email: "exemplo01@gmail.com",
+            Telefone:"(00)00000-0000",
+            produto: "Creme de pentear Salon Line 300ml",
+            quantidade: 1,
+            preco: 15.75,
+            pagamento: "Cartão de Crédito",
+            endereco: "Rua Cinza das Horas, 500",
+            situacao: "A caminho",
+            data: "04/12/2025"
+        },
+        4: {
+            Cliente: "Joaguim Moreira",
+            Email: "exemplo01@gmail.com",
+            Telefone:"(00)00000-0000",
+            produto: "Queijo Mussarela President 500g",
+            quantidade: 1,
+            preco: 19.99,
+            pagamento: "Cartão de Crédito",
+            endereco: "Rua Suíte de Natal, 500",
+            situacao: "Processando",
+            data: "04/12/2025"
+        }
+    };
+</script>
+
+<div class="card">
+    <p class="info"><span>Cliente:</span> <span id="cliente"></span></p>
+    <p class="info"><span>E-mail:</span> <span id="email"></span></p>
+    <p class="info"><span>Telefone:</span> <span id="telefone"></span></p>
+    <p class="info"><span>Produto:</span> <span id="produto"></span></p>
+    <p class="info"><span>Quantidade:</span> <span id="quantidade"></span></p>
+    <p class="info"><span>Preço Unitário:</span> <span id="preco"></span></p>
+    <p class="info"><span>Total Pago:</span> <span id="total"></span></p>
+    <p class="info"><span>Forma de Pagamento:</span> <span id="pagamento"></span></p>
+    <p class="info"><span>Endereço:</span> <span id="endereco"></span></p>
+    <p class="info"><span>Situação:</span> <span id="situacao"></span></p>
+    <p class="info"><span>Data da Compra:</span> <span id="data"></span></p>
+    <a href="gerenciarPedidos.html" class="botao-voltar">Voltar para a lista pedidos</a>
+</div>
+
+<script>
+    const pedido = pedidos[idPedido];
+
+    document.getElementById("cliente").innerText = pedido.cliente;
+    document.getElementById("email").innerText = pedido.email;
+    document.getElementById("telefone").innerText = pedido.telefone;
+    document.getElementById("produto").innerText = pedido.produto;
+    document.getElementById("quantidade").innerText = pedido.quantidade;
+    document.getElementById("preco").innerText = "R$ " + pedido.preco.toFixed(2).replace(".", ",");
+    document.getElementById("total").innerText = "R$ " + (pedido.preco * pedido.quantidade).toFixed(2).replace(".", ",");
+    document.getElementById("pagamento").innerText = pedido.pagamento;
+    document.getElementById("endereco").innerText = pedido.endereco;
+    document.getElementById("situacao").innerText = pedido.situacao;
+    document.getElementById("data").innerText = pedido.data;
+
+    const statusEl = document.getElementById("situacao");
+
+    if (pedido.situacao.includes("Entregue")) statusEl.classList.add("status-entregue");
+    else if (pedido.situacao.includes("caminho")) statusEl.classList.add("status-caminho");
+    else statusEl.classList.add("status-processando");
+</script>
+</script>
+
+    </body>
+</html>
